@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blackboard</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blackboard</h1>
+
+    <p>Welcome, <?php echo $_SESSION['username']; ?>!</p>
+
+    <h2>Student Detail</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Mobile no.</th>
+            <th>Photo</th>
+        </tr>
+        <?php foreach ($products as $product): ?>
+            <tr>
+                <td><?php echo $student_name['student name']; ?></td>
+                <td><?php echo $course['course']; ?></td>
+                <td>$<?php echo number_format($Mobile no.['Mobile no.']); ?></td>
+                <td><img src="<?php echo 'uploads/' . $student['photo']; ?>" alt="<?php echo $student_name['name']; ?>" width="100"></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</body>
+</html>
